@@ -1,0 +1,11 @@
+- hosts: netconf-lab
+  gather_facts: no
+  tasks:
+          - name: Check installed image
+            ios_command:
+                commands: sh ver | i _Software._Version_
+            register: iosimage
+
+          - name: Print running image versions
+            debug:
+                  msg: "Device {{ inventory_hostname }} ({{ ansible_ssh_host }}) has image {{ iosimage.stdout_lines[0] }} installed"

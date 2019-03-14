@@ -1,0 +1,14 @@
+- hosts: netconf-lab
+  gather_facts: no
+  vars:
+          ansible_connection: netconf
+  tasks:
+          - name: Get startup configuration
+            netconf_get:
+                source: running
+                display: json
+            register: startup_config
+
+          - name: Print startup config
+            debug:
+                  msg: "{{ startup_config.output }}"
