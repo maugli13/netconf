@@ -1,0 +1,5 @@
+<filter>
+	<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+		<hostname></hostname>
+	</native>
+</filter>
