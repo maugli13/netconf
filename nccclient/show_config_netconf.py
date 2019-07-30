@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     filterdata = ' '.join(payload)
 
-#    logging.basicConfig(level=logging.DEBUG)
+#   logging.basicConfig(level=logging.DEBUG)
     
     with manager.connect(
             host = args.address, 
